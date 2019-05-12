@@ -2,10 +2,10 @@ import { IKeyValueStoreAsync } from "@keeveestore/keeveestore";
 import { StoreSync } from "./sync";
 
 export class StoreAsync<K, T> implements IKeyValueStoreAsync<K, T> {
-	private readonly store: StoreSync<K, T>;
+	private constructor(private readonly store: StoreSync<K, T>) {}
 
-	public constructor(file: string) {
-		this.store = new StoreSync<K, T>(file);
+	public static async new<K, T>(file: string): Promise<StoreAsync<K, T>> {
+		return new StoreAsync<K, T>(StoreSync.new<K, T>(file));
 	}
 
 	public async all(): Promise<[K, T][]> {
