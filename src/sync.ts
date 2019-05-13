@@ -5,10 +5,10 @@ import lowdb from "lowdb";
 import FileSync from "lowdb/adapters/FileSync";
 
 export class StoreSync<K, T> implements IKeyValueStoreSync<K, T> {
-	private readonly store: lowdb.LowdbSync<any>;
+	private constructor(private readonly store: lowdb.LowdbSync<any>) {}
 
-	public constructor(file: string) {
-		this.store = lowdb(new FileSync(file));
+	public static new<K, T>(file: string): StoreSync<K, T> {
+		return new StoreSync<K, T>(lowdb(new FileSync(file)));
 	}
 
 	public all(): [K, T][] {
