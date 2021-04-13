@@ -1,4 +1,5 @@
 import { IKeyValueStoreAsync } from "@konceiver/kv";
+
 import { StoreSync } from "./sync";
 
 export class StoreAsync<K, T> implements IKeyValueStoreAsync<K, T> {
