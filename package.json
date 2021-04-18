@@ -26,13 +26,13 @@
 		"dist"
 	],
 	"dependencies": {
-		"@konceiver/kv": "^1.0.0",
+		"@konceiver/kv": "^1.0.1",
 		"lowdb": "^1.0.0"
 	},
 	"devDependencies": {
 		"@konceiver/kv-test-suite": "^1.0.0",
-		"@konceiver/tease": "^2.0.0",
-		"tempy": "^1.0.0"
+		"@konceiver/tease": "^2.0.1",
+		"tempy": "^1.0.1"
 	},
 	"types": "dist/index"
 }
