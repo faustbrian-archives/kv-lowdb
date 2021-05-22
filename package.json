@@ -27,7 +27,7 @@
 	],
 	"dependencies": {
 		"@konceiver/kv": "^1.0.1",
-		"lowdb": "^2.0.1"
+		"lowdb": "^2.0.3"
 	},
 	"devDependencies": {
 		"@konceiver/kv-test-suite": "^1.0.0",
